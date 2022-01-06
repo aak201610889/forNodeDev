@@ -4,8 +4,8 @@ const morgan=require('morgan')
 const logging = require('./logger/logger')
 const mongoose = require('mongoose');
 const app = express();
-const users=require('./routes/user/users')
-const employees=require('./routes/employees/employees')
+const users=require('./routes/users')
+const employees=require('./routes/employees')
 app.use(express.json())
 app.use('/api/employees', employees)
 app.use('/api/users',users)

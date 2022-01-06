@@ -4,7 +4,7 @@ const {
   Employee,
   emplyeeValidate,
   emplyeePutValidate,
-} = require("../../model/employee");
+} = require("../model/employee");
 
 router.get("/", async(req, res) => {
   const employees=await Employee.find().sort('name');
