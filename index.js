@@ -4,11 +4,13 @@ const morgan=require('morgan')
 const logging = require('./logger/logger')
 const mongoose = require('mongoose');
 const app = express();
-const users=require('./routes/users')
+const users = require('./routes/users')
+const auth = require('./routes/auth')
 const employees=require('./routes/employees')
 app.use(express.json())
 app.use('/api/employees', employees)
-app.use('/api/users',users)
+app.use('/api/users', users)
+app.use('/api/auth', auth)
 
 mongoose.connect('mongodb://localhost/mycompany', {
   useNewUrlParser: true,
